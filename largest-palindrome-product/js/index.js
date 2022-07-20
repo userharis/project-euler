@@ -8,8 +8,8 @@ function largestPalindromeProduct() {
       const product = i * j;
       const s = product.toString();
       const r = s.split("").reverse().join("");
-      if (r === s) {
-        result = Math.max(result, product);
+      if (r === s && product > result) {
+        result = product;
       }
     }
   }

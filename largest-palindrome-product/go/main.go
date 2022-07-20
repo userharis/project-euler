@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"strconv"
 )
 
@@ -19,8 +18,8 @@ func largestPalindromeProduct() int {
 			s := strconv.Itoa(product)
 			r := reverse(s)
 
-			if r == s {
-				result = int(math.Max(float64(result), float64(product)))
+			if r == s && product > result {
+				result = product
 			}
 		}
 	}
